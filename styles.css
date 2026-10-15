@@ -667,3 +667,7 @@ fieldset.field { border: 0; }
   .hero-ctas { gap: 10px; }
   .hero-ctas .btn { padding: 16px 20px; }
 }
+
+/* Office photo label: centered along the bottom of the photo */
+.visits-section .photo-tag { left: 50%; bottom: 28px; transform: translateX(-50%); white-space: nowrap; }
+@media (max-width: 900px) { .visits-section .photo-tag { bottom: 16px; } }

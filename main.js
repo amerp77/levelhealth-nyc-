@@ -8,13 +8,13 @@
   // Hero: text drifts down slowly and fades late, so it stays readable while scrolling
   var hero = document.querySelector('.hero');
   var heroInner = hero && hero.querySelector('.hero-inner');
-  var still = window.matchMedia('(prefers-reduced-motion: reduce), (max-width: 720px)').matches;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (heroInner && !still) {
     var ticking = false;
     function heroScroll() {
       ticking = false;
       var h = hero.offsetHeight, y = Math.min(window.scrollY, h);
-      var fade = Math.min(1, Math.max(0, (y - h * 0.45) / (h * 0.5)));
+      var fade = Math.min(1, Math.max(0, (y - h * 0.55) / (h * 0.45)));
       heroInner.style.transform = 'translate3d(0,' + (y * 0.5).toFixed(1) + 'px,0)';
       heroInner.style.opacity = (1 - fade).toFixed(3);
     }
