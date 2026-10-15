@@ -8,7 +8,7 @@
   // Hero: text drifts down slowly and fades late, so it stays readable while scrolling
   var hero = document.querySelector('.hero');
   var heroInner = hero && hero.querySelector('.hero-inner');
-  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce), (max-width: 720px)').matches;
   if (heroInner && !still) {
     var ticking = false;
     function heroScroll() {

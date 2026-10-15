@@ -654,3 +654,16 @@ fieldset.field { border: 0; }
 #reserve .form-note { margin-top: 6px; }
 @media (max-width: 960px) { #reserve .reserve { grid-template-columns: 1fr; } }
 @media (max-width: 960px) { #reserve .reserve-photo { display: none; } }
+
+/* Hero on phones: photo visible up top, text grouped at the bottom */
+@media (max-width: 720px) {
+  .hero { align-items: flex-end; }
+  .hero-inner { padding-top: 96px; padding-bottom: 44px; }
+  .hero-photo { object-position: 56% 50%; }
+  .hero-shade { background: linear-gradient(180deg, rgba(18,18,16,.45) 0%, rgba(18,18,16,.35) 30%, rgba(18,18,16,.82) 62%, rgba(18,18,16,.94) 100%); }
+  .hero .eyebrow { margin-bottom: 14px; font-size: 10px; }
+  .hero h1 { font-size: 36px; line-height: 1.1; margin-bottom: 16px; }
+  .hero p.lede { font-size: 15px; line-height: 1.6; margin-bottom: 26px; }
+  .hero-ctas { gap: 10px; }
+  .hero-ctas .btn { padding: 16px 20px; }
+}
